@@ -1,4 +1,4 @@
-#Using python to manipulate sets
+# Using python to manipulate sets
 
 '''
 Python knows a number of compound data types, 
@@ -34,26 +34,42 @@ union() Return a set containing the union of sets
 update() Update the set with another set, or any other iterable
 '''
 
-#The basics
+# The basics
 basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
-print(basket)# show that duplicates have been removed
+print(basket)  # show that duplicates have been removed
+# print(basket[5]) - nije podrzano
+basket.add("watermelon")
 
-'orange' in basket # fast membership testing
-'crabgrass' in basket
+'orange' in basket  # fast membership testing
+'crabgrass' in basket  # False
 
 # Demonstrate set operations on unique letters from two words
 a = set('abracadabra')
 b = set('alacazam')
-a # unique letters in a
-a - b # letters in a but not in b
-a | b # letters in a or b or both
-a & b # letters in both a and b
-a ^ b # letters in a or b but not both
+a  # unique letters in a
+a - b  # letters in a but not in b
+a | b  # letters in a or b or both
+a & b  # letters in both a and b
+a ^ b  # letters in a or b but not both
 
 
-#Set comprehension
+# Set comprehension
 a = {x for x in 'abracadabra' if x not in 'abc'}
 
-#built-in function set()
-x = set(('bobby','bobby', 'at', 'didcoding','dot', 'com')) # creates a set object
+# built-in function set()
+# creates a set object
+x = set(('bobby', 'bobby', 'at', 'didcoding', 'dot', 'com'))
 x
+
+set1 = {"semir", "emir"}
+set2 = {"emir", "demir"}
+# set3 = set1 + set2 # unsuported operand + for set
+set4 = set1.union(set2)
+print(set4)  # it returns {'demir', 'semir', 'emir'}
+set5 = set1.intersection(set2)
+print(set5)  # {'emir'}
+
+letters = "abc"
+numbers = {1, 2, 3}
+numbers.update(letters)
+print(numbers)  # {'a', 1, 2, 3, 'b', 'c'}
