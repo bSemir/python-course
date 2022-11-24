@@ -1,4 +1,4 @@
-#Using python to manipulate dictionary
+# Using python to manipulate dictionary
 
 '''
 Python knows a number of compound data types, 
@@ -35,7 +35,9 @@ update() Updates the dictionary with the specified key-value pairs
 values() Returns a list of all the values in the dictionary
 '''
 
-#The basics
+# It's like JSON :)
+
+# The basics
 some_dict = {
     'a_key': 'a_value',
     'a_key_2': 'a_value_2',
@@ -46,28 +48,33 @@ some_dict
 
 
 some_dict[0]  # this will return an error as you need to ref the key by name
+# like this
 some_dict['a_key']
 some_dict['a_key_4']
 
 
-#Create a dict copy
+# Create a dict copy
 some_dict.copy()
+dict2 = some_dict.copy()
 
-#altering a dict
-some_dict['a_key'] = 'new_value'  
+# altering a dict
+some_dict['a_key'] = 'new_value'
 some_dict['a_key']
 
-#Length
+# Length
 len(some_dict)
 
-#show all keys and values
+# show all keys and values
 some_dict.keys()
 some_dict.values()
 
+to_update = {'a_key_2': 'updated'}
+some_dict.update(to_update)
+some_dict
 
-#Dict comprehension
+# Dict comprehension
 {x: x**2 for x in (2, 4, 6)}
 
-#built-in function dict()
-x = dict(a=1, b=2, c=3, d=4)# creates a dictionary object
-x
+# built-in function dict()
+x = dict(a=1, b=2, c=3, d=4)  # creates a dictionary object
+x  # {'a': 1, 'b':2, 'c':3, 'd':4}
