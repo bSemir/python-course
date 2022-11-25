@@ -1,4 +1,4 @@
-#Python control flows - Loop clauses
+# Python control flows - Loop clauses
 
 '''
 Python has a few statements and clauses that we can use in loops. 
@@ -14,29 +14,42 @@ when the condition becomes false (with while), but not when the
 loop is terminated by a break statement. 
 '''
 
-#Break statement
-for n in range(2, 10): #equivalent of...for n in [2,3,4,5,6,7,8,9]:
-    for x in range(2, n): #first loop is for x in range(2, 2):
-        if n % x == 0: 
+# Break statement
+for n in range(2, 10):  # equivalent of...for n in [2,3,4,5,6,7,8,9]:
+    for x in range(2, n):  # first loop is for x in range(2, 2):
+        if n % x == 0:
             print(n, 'equals', x, '*', n//x)
             break
-    #the else runs when no break clause occurs
+    # the else runs when no break clause occurs
     else:
         print(n, 'is a prime number')
 
 
-#Continue statement
-for num in range(2, 10): #equivalent of...for n in [2,3,4,5,6,7,8,9]:
+# Continue statement
+for num in range(2, 10):  # equivalent of...for n in [2,3,4,5,6,7,8,9]:
     if num % 2 == 0:
         print("Found an even number", num)
-        continue #Will continue with the next loop
+        continue  # Will continue with the next loop
     print("Found an odd number", num)
 
 
-#Pass statement
+def print_pattern():  # prints pyramid pattern
+    n = 5
+    for j in range(1, n+1):
+        for k in range(n-j+1, 1, -1):
+            print(" ", end='')
+        print("* " * j)
+
+
+print_pattern()
+# Pass statement
+
+
 class MyPassClass:
     pass
 
+# enables us to call a function that does nothing
+
 
 def my_pass_def(*args):
-    pass #Needs looking at
+    pass  # Needs looking at

@@ -1,4 +1,4 @@
-#Modules
+# Modules
 
 '''
 In Python we are able to write a long program and save as a module. This
@@ -13,10 +13,17 @@ Pythons standard library can be found here https://docs.python.org/3/library/
 
 from functions import demo_func
 
-def func_1(arg:int):
+# here, we can use demo_func from functions file!
+
+
+def func_1(arg: int):
     x = [y for y in range(2, 10, 2)]
     x.append(arg)
     print(x)
 
-def func_2(number:int, power:int):
-    print(pow(number,power))
+
+def func_2(number: int, power: int):
+    print(pow(number, power))
+
+# for example, var = demo_func(5)
+#func_2(var, 7);

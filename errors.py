@@ -1,4 +1,4 @@
-#Handling errors
+# Handling errors
 
 '''
 Python has (at least) two distinguishable kinds of errors: 
@@ -45,24 +45,27 @@ UnicodeTranslateError Raised when a unicode translation problem occurs
 ValueError Raised when there is a wrong value in a specified data type
 ZeroDivisionError Raised when the second operator in a division is zero
 '''
-#Basic examples
+# Basic examples
 10 * (1/0)
 4 + spam*3
 '2' + 2
 
-#Handling exceptions
+# Handling exceptions
+
+# ugl slicno kao try-catch u c++
 
 while True:
     try:
         x = int(input("Please enter a number: "))
         break
-    #Add multiple exceptions in a tuple (RuntimeError, TypeError, NameError)
-    except (RuntimeError, TypeError, NameError, ValueError): 
+    # Add multiple exceptions in a tuple (RuntimeError, TypeError, NameError)
+    except (RuntimeError, TypeError, NameError, ValueError):
         print("Oops!  That was no valid number.  Try again...")
 
 
 def this_fails():
     x = 1/0
+
 
 try:
     this_fails()
@@ -80,6 +83,8 @@ task before the try statement completes. The finally clause runs whether or
 not the try statement produces an exception. The following points discuss 
 more complex cases when an exception occurs.
 '''
+
+
 def divide(x, y):
     try:
         result = x / y
@@ -91,6 +96,7 @@ def divide(x, y):
         print("result is", result)
     finally:
         print("executing finally clause")
+
 
 divide(2, 1)
 divide(2, 0)

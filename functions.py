@@ -1,4 +1,4 @@
-#Python functions
+# Python functions
 
 '''
 Think of a function as a little named container for a group of your code!
@@ -39,29 +39,35 @@ There are 3 forms of function arguments
 3) Keyword only arguments (named parameters)
 '''
 
-#basics
-def demo_func(param:int):
-    """This is just a demo
-    function.
-    """
+# basics
+
+
+def demo_func(param: int):
+    # demo function that we used in modules part
     calc = param + 4
     return calc
+
 
 demo_func(6)
 
 
-#function arguments
+# function arguments
 def standard_arg(arg):
     print(arg)
+
 
 def pos_only_arg(arg, /):
     print(arg)
 
+
 def kwd_only_arg(*, arg):
     print(arg)
 
+
 def combined_example(pos_only, /, standard, *, kwd_only):
     print(pos_only, standard, kwd_only)
+
+
 '''
 def combined_example(pos_only, /, standard, *, kwd_only):
                      --------     --------     ---------
@@ -92,4 +98,3 @@ prevent users relying on the position of the argument being passed.
 For an API, use positional-only to prevent breaking API changes if 
 the parameter’s name is modified in the future.
 '''
-
